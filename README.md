@@ -5,7 +5,7 @@
 ### Binary neural networks: A survey
 
 
-*Haotong Qin , Ruihao Gong , Xianglong Liu , Xiao Bai , Jingkuan Song , Nicu Sebe
+*Haotong Qin , Ruihao Gong , Xianglong Liu , Xiao Bai , Jingkuan Song , Nicu Sebe  
 Beihang University, University of Electronic Science and Technology of China, Chengdu, University of Trento, Italy*
 
 **ABSTRACT**  
