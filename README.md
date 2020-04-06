@@ -10,7 +10,7 @@ Binarized Neural Network(BNN):
 2.在激活值二值化之前batch normalization
 3.数据集：MNIST，Cifar-10，SVHN
 
-Xnor-net(BWN，XNOR):
+Xnor-Net(BWN，XNOR):
 1.binary-weight-networks + xnor-net
 2.，BWN只有权值二值化，xnor权值和激活值都二值化
 3.数据集：ImageNet
