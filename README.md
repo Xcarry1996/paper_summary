@@ -1,5 +1,18 @@
 整理重要的文献专用~
 
+```
+BinaryConnect(BC): 
+1.仅在前向传播计算激活值和反向传播计算梯度2个操作对权值W二值化，权值更新时权值W不二值化
+2.提出stochastic binarization（相对deterministic）
+
+Binary Neural Network(BNN):
+1.从第一层到倒数第二层对权值W和激活值A都进行二值化，第一层的初始激活值为所有二值化权值和真实值输入的乘累加和
+2.在激活值二值化之前batch normalization
+
+
+```
+
+
 # **BNN**
 ### Binary neural networks: A survey
 
