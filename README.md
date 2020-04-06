@@ -8,10 +8,12 @@ BinaryConnect(BC):
 Binarized Neural Network(BNN):
 1.从第一层到倒数第二层对权值W和激活值A都进行二值化，第一层的初始激活值为所有二值化权值和真实值输入的乘累加和
 2.在激活值二值化之前batch normalization
+3.数据集：MNIST，Cifar-10，SVHN
 
 Xnor-net(BWN，XNOR):
-1.提出binary-weight-networks和xnor-net，BWN只有权值二值化，xnor权值和激活值都二值化
-2.细节待续...
+1.binary-weight-networks + xnor-net
+2.，BWN只有权值二值化，xnor权值和激活值都二值化
+3.数据集：ImageNet
 
 ```
 
