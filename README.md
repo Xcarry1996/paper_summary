@@ -15,12 +15,17 @@ Xnor-Net(BWN，XNOR):
 2.，BWN只有权值二值化，xnor权值和激活值都二值化
 3.数据集：ImageNet
 
-DSQ:
+Differentiable Soft Quantization(DSQ):
 1.提出一种介于全精度和量化中间的函数，BP可以计算梯度（通常意义的round()量化没法计算）
 2.随着batch增加，函数逐渐接近的量化函数。设置观测参数α，加入loss函数计算最优解，获得更准确的量化函数
 3.用DSQ做BNN的效果没差别，BP计算梯度不一样，用α作为参数，可以观察不同参数对量化的敏感度
 4.重点是对量化过程做了研究，引入新的量化函数提升精度，github上没有代码
+5.线性量化(uniform)
 
+
+LQ-Net:
+1.量化误差作为指标加入loss迭代学习，获得更高精度的量化区间
+2.非线性量化
 
 ```
 
@@ -79,3 +84,12 @@ We propose two efficient approximations to standard convolutional neural network
 Hardware-friendly network quantization (e.g., binary/uniform quantization) can efficiently accelerate the inference and meanwhile reduce memory consumption of the deep neural networks, which is crucial for model deployment on resource-limited devices like mobile phones. However, due to the discreteness of low-bit quantization, existing quantization methods often face the unstable training process and severe performance degradation. To address this problem, in this paper we propose Differentiable Soft Quantization (DSQ) to bridge the gap between the full-precision and low-bit networks. _**DSQ can automatically evolve during training to gradually approximate the standard quantization**_. Owing to its differentiable property, DSQ can help pursue the accurate gradients in backward propagation, and reduce the quantization loss in forward process with an appropriate clipping range. Extensive experiments over several popular network structures show that training low-bit neural networks with DSQ can consistently outperform state-of-the-art quantization methods. Besides, our first efficient implementation for deploying 2 to 4-bit DSQ on devices with ARM architecture achieves up to 1.7× speed up, compared with the open-source 8-bit high-performance inference framework NCNN.
 
 
+----
+### LQ-Nets: Learned Quantization for Highly Accurate and Compact Deep Neural Networks
+
+*Dongqing Zhang∗, Jiaolong Yang∗, Dongqiangzi Ye∗, and Gang Hua  
+Microsoft Research*
+
+**ABSTRACT**  
+
+Although weight and activation quantization is an effective approach for Deep Neural Network (DNN) compression and has a lot of potentials to increase inference speed leveraging bit-operations, there is still a noticeable gap in terms of prediction accuracy between the quantized model and the full-precision model. To address this gap, we propose to _**jointly train**_ a quantized, bit-operation-compatible DNN and its associated quantizers, as opposed to using fixed, handcrafted quantization schemes such as uniform or logarithmic quantization. Our method for learning the quantizers applies to both network weights and activations with arbitrary-bit precision, and _**our quantizers are easy to train**_. The comprehensive experiments on CIFAR-10 and ImageNet datasets show that our method works consistently well for various network structures such as AlexNet, VGG-Net, GoogLeNet, ResNet, and DenseNet, surpassing previous quantization methods in terms of accuracy by an appreciable margin. Code available at https://github.com/Microsoft/LQ-Nets
