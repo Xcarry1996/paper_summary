@@ -1,6 +1,7 @@
 整理重要的文献专用~
 
 ```
+二值网络
 BinaryConnect(BC): 
 1.仅在前向传播计算激活值和反向传播计算梯度2个操作对权值W二值化，权值更新时权值W不二值化
 2.提出stochastic binarization（相对deterministic）
@@ -15,6 +16,7 @@ Xnor-Net(BWN，XNOR):
 2.，BWN只有权值二值化，xnor权值和激活值都二值化
 3.数据集：ImageNet
 
+量化
 Differentiable Soft Quantization(DSQ):
 1.提出一种介于全精度和量化中间的函数，BP可以计算梯度（通常意义的round()量化没法计算）
 2.随着batch增加，函数逐渐接近的量化函数。设置观测参数α，加入loss函数计算最优解，获得更准确的量化函数
