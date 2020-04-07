@@ -74,7 +74,6 @@ We propose two efficient approximations to standard convolutional neural network
 
 
 ## QUANTIZATION
-----
 ### Differentiable Soft Quantization: Bridging Full-Precision and Low-Bit Neural Networks
 
 *Ruihao Gong1,2 Xianglong Liu1∗ Shenghu Jiang1,2 Tianxiang Li2,3 Peng Hu2 Jiazhen Lin 2 Fengwei Yu2 Junjie Yan2  
