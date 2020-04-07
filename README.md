@@ -15,6 +15,10 @@ Xnor-Net(BWN，XNOR):
 2.，BWN只有权值二值化，xnor权值和激活值都二值化
 3.数据集：ImageNet
 
+DSQ:
+1.提出一种介于全精度和量化中间的函数，在BP可以计算梯度（通常意义的round()量化没法计算）
+2.观测参数α的值，可以对比不同参数对量化区间的敏感度
+3.这篇论文太扯淡的，用DSQ做BNN的效果没差别，只不过BP计算梯度不一样，以及利用量化的参数α学习并寻找量化区间，从而得到最好的量化效果
 ```
 
 
@@ -59,3 +63,16 @@ Allen Institute for AI†, University of Washington∗*
 **ABSTRACT** 
 
 We propose two efficient approximations to standard convolutional neural networks: _**Binary-Weight-Networks**_ and _**XNOR-Networks**_. In Binary-Weight-Networks, the filters are approximated with binary values resulting in _**32× memory saving**_. In XNOR-Networks, both the filters and the input to convolutional layers are binary. XNOR-Networks approximate convolutions using primarily binary operations. This results in _**58× faster convolutional operations and 32× memory savings**_. XNOR-Nets offer the possibility of running state-of-the-art networks on CPUs (rather than GPUs) in real-time. Our binary networks are simple, accurate, efficient, and work on challenging visual tasks. We evaluate our approach on the ImageNet classification task. The classification accuracy with a Binary-Weight-Network version of _**AlexNet**_ is only _**2.9%**_ less than the full-precision AlexNet (in top-1 measure). We compare our method with recent network binarization methods, BinaryConnect and BinaryNets, and outperform these methods by large margins on ImageNet, more than 16% in top-1 accuracy.
+
+
+----
+### Differentiable Soft Quantization: Bridging Full-Precision and Low-Bit Neural Networks
+
+*Ruihao Gong1,2 Xianglong Liu1∗ Shenghu Jiang1,2 Tianxiang Li2,3 Peng Hu2 Jiazhen Lin 2 Fengwei Yu2 Junjie Yan2  
+1State Key Laboratory of Software Development Environment, Beihang University 2SenseTime Group Limited 3Beijing Institute of Technology*  
+
+**ABSTRACT** 
+
+Hardware-friendly network quantization (e.g., binary/uniform quantization) can efficiently accelerate the inference and meanwhile reduce memory consumption of the deep neural networks, which is crucial for model deployment on resource-limited devices like mobile phones. However, due to the discreteness of low-bit quantization, existing quantization methods often face the unstable training process and severe performance degradation. To address this problem, in this paper we propose Differentiable Soft Quantization (DSQ) to bridge the gap between the full-precision and low-bit networks. _**DSQ can automatically evolve during training to gradually approximate the standard quantization**_. Owing to its differentiable property, DSQ can help pursue the accurate gradients in backward propagation, and reduce the quantization loss in forward process with an appropriate clipping range. Extensive experiments over several popular network structures show that training low-bit neural networks with DSQ can consistently outperform state-of-the-art quantization methods. Besides, our first efficient implementation for deploying 2 to 4-bit DSQ on devices with ARM architecture achieves up to 1.7× speed up, compared with the open-source 8-bit high-performance inference framework NCNN.
+
+
