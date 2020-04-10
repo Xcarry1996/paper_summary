@@ -28,6 +28,12 @@ LQ-Net:
 1.量化误差作为指标加入loss迭代学习，获得更高精度的量化区间
 2.非线性量化
 
+## 行为级模型
+CI-BCNN：
+1.目前看见cifar10精度比较好的BNN网络->92.5%
+2.ResNet-20
+3.网上没给权值，自己用CPU做training一共跑了大约60个epoch（1h一个epoch），精度目前可以达到85%
+
 ```
 
 
@@ -107,7 +113,7 @@ Although weight and activation quantization is an effective approach for Deep Ne
 
 **ABSTRACT** 
 
-In this paper, we propose a _**channel-wise interaction based binary convolutional neural network learning method (CI-BCNN)**_ for efficient inference. Conventional methods apply _**xnor**_ and _**bitcount**_ operations in binary convolution with notable quantization error, which usually obtains in-consistent signs in binary feature maps compared with their full-precision counterpart and leads to significant information loss. In contrast, our CI-BCNN mines the channel-wise interactions, through which prior knowledge is provided to alleviate inconsistency of signs in binary feature maps and preserves the information of input samples during inference. Specifically, we mine the channel-wise interactions by a reinforcement learning model, and impose channel-wise priors on the intermediate feature maps through the interacted bitcount function. Extensive experiments on the CIFAR-10 and ImageNet datasets show that our method outperforms the state-of-the-art binary convolutional neural networks with less computational and storage cost.
+In this paper, we propose a _**channel-wise interaction based binary convolutional neural network learning method (CI-BCNN)**_ for efficient inference. Conventional methods apply _**xnor**_ and _**bitcount**_ operations in binary convolution with *notable quantization error*, which usually obtains in-consistent signs in binary feature maps compared with their full-precision counterpart and *leads to significant information loss*. In contrast, our CI-BCNN mines the _**channel-wise**_ interactions, through which _**prior knowledge is provided to alleviate inconsistency of signs in binary feature maps**_ and _**preserves the information of input samples during inference**_. Specifically, we mine the channel-wise interactions by a _**reinforcement learning model**_, and impose channel-wise priors on the intermediate feature maps through the interacted bitcount function. Extensive experiments on the _**CIFAR-10**_ and _**ImageNet**_ datasets show that our method outperforms the state-of-the-art binary convolutional neural networks with _**less computational and storage cost**_.
 
 
 
