@@ -99,15 +99,15 @@ Although weight and activation quantization is an effective approach for Deep Ne
 ----
 ### Learning Channel-wise Interactions for Binary Convolutional Neural Networks
 
-*Ziwei Wang1,2,3, Jiwen Lu1,2,3, Chenxin Tao1, Jie Zhou1,2,3, Qi Tian4
-1 Department of Automation, Tsinghua University, China
-2 State Key Lab of Intelligent Technologies and Systems, China
-3 Beijing National Research Center for Information Science and Technology, China
-4 Huawei Noah’s Ark Lab, China*
+*Ziwei Wang1,2,3, Jiwen Lu1,2,3, Chenxin Tao1, Jie Zhou1,2,3, Qi Tian4  
+1 Department of Automation, Tsinghua University, China  
+2 State Key Lab of Intelligent Technologies and Systems, China  
+3 Beijing National Research Center for Information Science and Technology, China  
+4 Huawei Noah’s Ark Lab, China*  
 
 **ABSTRACT** 
 
-In this paper, we propose a channel-wise interaction based binary convolutional neural network learning method (CI-BCNN) for efficient inference. Conventional methods apply xnor and bitcount operations in binary convolution with notable quantization error, which usually obtains in-consistent signs in binary feature maps compared with their full-precision counterpart and leads to significant information loss. In contrast, our CI-BCNN mines the channel-wise interactions, through which prior knowledge is provided to alleviate inconsistency of signs in binary feature maps and preserves the information of input samples during inference. Specifically, we mine the channel-wise interactions by a reinforcement learning model, and impose channel-wise priors on the intermediate feature maps through the interacted bitcount function. Extensive experiments on the CIFAR-10 and ImageNet datasets show that our method outperforms the state-of-the-art binary convolutional neural networks with less computational and storage cost.
+In this paper, we propose a _**channel-wise interaction based binary convolutional neural network learning method (CI-BCNN)**_ for efficient inference. Conventional methods apply _**xnor**_ and _**bitcount**_ operations in binary convolution with notable quantization error, which usually obtains in-consistent signs in binary feature maps compared with their full-precision counterpart and leads to significant information loss. In contrast, our CI-BCNN mines the channel-wise interactions, through which prior knowledge is provided to alleviate inconsistency of signs in binary feature maps and preserves the information of input samples during inference. Specifically, we mine the channel-wise interactions by a reinforcement learning model, and impose channel-wise priors on the intermediate feature maps through the interacted bitcount function. Extensive experiments on the CIFAR-10 and ImageNet datasets show that our method outperforms the state-of-the-art binary convolutional neural networks with less computational and storage cost.
 
 
 
