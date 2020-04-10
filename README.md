@@ -94,3 +94,21 @@ Microsoft Research*
 **ABSTRACT**  
 
 Although weight and activation quantization is an effective approach for Deep Neural Network (DNN) compression and has a lot of potentials to increase inference speed leveraging bit-operations, there is still a noticeable gap in terms of prediction accuracy between the quantized model and the full-precision model. To address this gap, we propose to _**jointly train**_ a quantized, bit-operation-compatible DNN and its associated quantizers, as opposed to using fixed, handcrafted quantization schemes such as uniform or logarithmic quantization. Our method for learning the quantizers applies to both network weights and activations with arbitrary-bit precision, and _**our quantizers are easy to train**_. The comprehensive experiments on CIFAR-10 and ImageNet datasets show that our method works consistently well for various network structures such as AlexNet, VGG-Net, GoogLeNet, ResNet, and DenseNet, surpassing previous quantization methods in terms of accuracy by an appreciable margin. Code available at https://github.com/Microsoft/LQ-Nets
+
+
+----
+### Learning Channel-wise Interactions for Binary Convolutional Neural Networks
+
+*Ziwei Wang1,2,3, Jiwen Lu1,2,3, Chenxin Tao1, Jie Zhou1,2,3, Qi Tian4
+1 Department of Automation, Tsinghua University, China
+2 State Key Lab of Intelligent Technologies and Systems, China
+3 Beijing National Research Center for Information Science and Technology, China
+4 Huawei Noah’s Ark Lab, China*
+
+**ABSTRACT** 
+
+In this paper, we propose a channel-wise interaction based binary convolutional neural network learning method (CI-BCNN) for efficient inference. Conventional methods apply xnor and bitcount operations in binary convolution with notable quantization error, which usually obtains in-consistent signs in binary feature maps compared with their full-precision counterpart and leads to significant information loss. In contrast, our CI-BCNN mines the channel-wise interactions, through which prior knowledge is provided to alleviate inconsistency of signs in binary feature maps and preserves the information of input samples during inference. Specifically, we mine the channel-wise interactions by a reinforcement learning model, and impose channel-wise priors on the intermediate feature maps through the interacted bitcount function. Extensive experiments on the CIFAR-10 and ImageNet datasets show that our method outperforms the state-of-the-art binary convolutional neural networks with less computational and storage cost.
+
+
+
+
