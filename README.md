@@ -80,7 +80,7 @@ Allen Institute for AI†, University of Washington∗*
 We propose two efficient approximations to standard convolutional neural networks: _**Binary-Weight-Networks**_ and _**XNOR-Networks**_. In Binary-Weight-Networks, the filters are approximated with binary values resulting in _**32× memory saving**_. In XNOR-Networks, both the filters and the input to convolutional layers are binary. XNOR-Networks approximate convolutions using primarily binary operations. This results in _**58× faster convolutional operations and 32× memory savings**_. XNOR-Nets offer the possibility of running state-of-the-art networks on CPUs (rather than GPUs) in real-time. Our binary networks are simple, accurate, efficient, and work on challenging visual tasks. We evaluate our approach on the ImageNet classification task. The classification accuracy with a Binary-Weight-Network version of _**AlexNet**_ is only _**2.9%**_ less than the full-precision AlexNet (in top-1 measure). We compare our method with recent network binarization methods, BinaryConnect and BinaryNets, and outperform these methods by large margins on ImageNet, more than 16% in top-1 accuracy.
 
 
-## QUANTIZATION
+# QUANTIZATION
 ### Differentiable Soft Quantization: Bridging Full-Precision and Low-Bit Neural Networks
 
 *Ruihao Gong1,2 Xianglong Liu1∗ Shenghu Jiang1,2 Tianxiang Li2,3 Peng Hu2 Jiazhen Lin 2 Fengwei Yu2 Junjie Yan2  
@@ -102,7 +102,7 @@ Microsoft Research*
 Although weight and activation quantization is an effective approach for Deep Neural Network (DNN) compression and has a lot of potentials to increase inference speed leveraging bit-operations, there is still a noticeable gap in terms of prediction accuracy between the quantized model and the full-precision model. To address this gap, we propose to _**jointly train**_ a quantized, bit-operation-compatible DNN and its associated quantizers, as opposed to using fixed, handcrafted quantization schemes such as uniform or logarithmic quantization. Our method for learning the quantizers applies to both network weights and activations with arbitrary-bit precision, and _**our quantizers are easy to train**_. The comprehensive experiments on CIFAR-10 and ImageNet datasets show that our method works consistently well for various network structures such as AlexNet, VGG-Net, GoogLeNet, ResNet, and DenseNet, surpassing previous quantization methods in terms of accuracy by an appreciable margin. Code available at https://github.com/Microsoft/LQ-Nets
 
 
-## BEHAVIOR MODEL
+# BEHAVIOR MODEL
 ### Learning Channel-wise Interactions for Binary Convolutional Neural Networks
 
 *Ziwei Wang1,2,3, Jiwen Lu1,2,3, Chenxin Tao1, Jie Zhou1,2,3, Qi Tian4  
